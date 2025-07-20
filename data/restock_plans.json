@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "name": "补货计划",
+    "description": "补货计划描述",
+    "packages": [
+      {
+        "package_id": 1,
+        "quantity": 1
+      }
+    ],
+    "is_packed": true,
+    "created_at": "2025-07-20T03:39:09.293Z"
+  }
+]

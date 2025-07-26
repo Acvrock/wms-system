@@ -1,0 +1,77 @@
+WMS System Manual Start Instructions
+=====================================
+
+RECOMMENDED METHOD:
+==================
+Double-click start.bat - it handles everything automatically!
+
+SQLITE3 ERROR FIX (if needed):
+==============================
+The start.bat script now automatically fixes SQLite3 issues.
+If you still have problems, manual fix:
+1. Delete node_modules folder
+2. npm cache clean --force
+3. npm install
+4. npm rebuild sqlite3
+5. cd client && npm install && npm run build && cd ..
+
+Manual Start Instructions:
+==========================
+
+If the batch files don't work, follow these steps manually:
+
+1. Open Command Prompt (cmd) as Administrator
+2. Navigate to the WMS directory
+3. Run these commands one by one:
+
+First time setup:
+-----------------
+npm install
+npm rebuild sqlite3
+cd client
+npm install
+npm run build
+cd ..
+
+Start system:
+-------------
+npm start
+
+Then open browser and go to:
+http://localhost:3000
+
+Login accounts:
+- boss / 123456aa (full access)
+- manager / 123456aa (limited access)
+
+To stop: Press Ctrl+C in command prompt
+
+Troubleshooting:
+================
+
+Error "npm is not recognized":
+- Install Node.js from https://nodejs.org/
+- Make sure to install the Windows version that matches your system (x64/x86)
+- Restart command prompt
+
+Error "node_sqlite3.node is not a valid Win32 application":
+- Your system architecture doesn't match the installed sqlite3 binary
+- Run: npm rebuild sqlite3
+- Or use the fix scripts provided
+
+Error "port 3000 already in use":
+- Close other applications using port 3000
+- Or kill process: taskkill /f /im node.exe
+
+Error "permission denied" or "access denied":
+- Run command prompt as administrator
+- Make sure antivirus isn't blocking Node.js
+
+Error "Python not found":
+- Some native modules need Python for compilation
+- Install Python from https://python.org/
+- Or install windows-build-tools: npm install -g windows-build-tools
+
+Node.js Version Issues:
+- Use Node.js 16.x or 18.x (LTS versions recommended)
+- Avoid very new or very old Node.js versions

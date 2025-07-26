@@ -1,0 +1,12 @@
+二、需求
+1、需求 1
+针对状态为"已打包"的【补货计划】，增加一个按钮"查看"，点击可以查看该【补货计划】的所有信息，包括其中的各个【套装】及数量，及各个【套装】包含的各个【配件】的数量
+
+
+http://localhost:3000/api/restock/24
+请求方法
+PUT
+状态代码
+500 Internal Server Error
+
+{"name":"33","description":"阿斯蒂芬","bundles":[{"bundle_id":8,"quantity":1111113},{"bundle_id":5,"quantity":11111111}]}
